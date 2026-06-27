@@ -14,12 +14,14 @@ typedef struct cancion{
     int duracion;
     int reproducciones;
     char archivo[100];
-} Cancion;
+    struct cancion *sig;
+} cancion;
 
 typedef struct disco{
     char nombre[50];
     fechas lanzamiento;
-    Cancion *canciones;
+    cancion *canciones;
+    struct disco *sig;
 } disco;
 
 typedef struct nodoartistas{
@@ -38,14 +40,14 @@ typedef struct plan{
 }Plan;
 
 typedef struct Reproduccion {
-    Cancion *cancion;
+    cancion *cancion;
     fechas fecha;
     struct Reproduccion *sig;
 }Reproduccion;
 
 typedef struct Playlist{
     char nombre[50];
-    Cancion *canciones;
+    cancion *canciones;
     struct Playlist *sig;
 } Playlist;
 
