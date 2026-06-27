@@ -60,20 +60,20 @@ typedef struct Anuncio{
 typedef struct nodoamigo{
     struct nodousuario *usuario;
     struct nodoamigo *sig;
-}Nodoamigo;
+}nodoamigo;
 
 typedef struct nodousuario{
     char nombre[100];
     char correo[100];
     char pais[50];
     char nickname[50];
-    char contrasena[50];
+    char contraseña[50];
     int plan;
     Plan premiun;
     Reproduccion *historial;
     Playlist *playlists;
-    Nodoamigo *amigos;
-    struct nodousuario*sig,*der;
+    nodoamigo *amigos;
+    struct nodousuario*izq,*der;
 
 
 
