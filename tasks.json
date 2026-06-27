@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar proyecto completo",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "${workspaceFolder}/*.c",
+                "-o",
+                "${workspaceFolder}/spotify",
+                "-Wall",
+                "-g"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compila todos los .c del proyecto"
+        },
+        {
+            "label": "Compilar y ejecutar proyecto",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "gcc ${workspaceFolder}/*.c -o ${workspaceFolder}/spotify -Wall -g && ${workspaceFolder}/spotify"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "Compila todos los .c y ejecuta el programa"
+        }
+    ]
+}
