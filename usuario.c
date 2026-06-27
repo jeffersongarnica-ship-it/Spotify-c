@@ -20,6 +20,7 @@ void insertarusuario(nodousuario**arbol, char *nombre, char *correo,char *pais,c
             nuevo->izq= NULL;
             nuevo->der=NULL;
             *arbol=nuevo;
+            return;
             
     }
 //orden por correo
@@ -115,7 +116,7 @@ void mostraramigos(nodousuario*usuarios){
     if(actual==NULL){
         printf("No tienes amigos agregados\n");
         return;
-        
+
     }
 
     printf("\n-----LISTA DE AMIGOS--------\n");
