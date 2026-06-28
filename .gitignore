@@ -1,0 +1,12 @@
+# Ejecutables de C
+*.exe
+*.out
+
+# Archivos de compilación
+*.o
+
+# Configuración de VS Code
+.vscode/
+
+# Archivos temporales del sistema
+.DS_Store
